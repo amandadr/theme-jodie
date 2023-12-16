@@ -11,7 +11,7 @@ const triggerCss: ThemeUICSSObject = {
   left: 4,
   padding: 4,
   borderRadius: `default`,
-  background: `white`,
+  background: `#f8f7f2`,
   color: `text`,
   textDecoration: `none`,
   boxShadow: `lg`,
@@ -21,7 +21,7 @@ const triggerCss: ThemeUICSSObject = {
     clip: `auto`,
   },
   variant: `skip-nav`,
-}
+};
 
 export type SkipNavProps = {
   children?: React.ReactNode

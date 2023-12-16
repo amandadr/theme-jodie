@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxFrag */
 import { jsx, Heading } from "theme-ui"
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
@@ -34,27 +35,29 @@ export type JodieProjectProps = {
   }
 }
 
-const Project: React.FC<React.PropsWithChildren<PageProps<JodieProjectProps>>> = ({
-  data: { project, images },
-  children,
-}) => (
-  <Layout color={project.color || undefined}>
-    <div sx={{ variant: `content.project` }}>
-      <div sx={{ fontSize: 2, textTransform: `uppercase`, letterSpacing: `wider`, mb: 2 }}>{project.category}</div>
-      <Heading as="h1" variant="styles.h1" sx={{ mt: 0 }}>
-        {project.title}
-      </Heading>
-      <div sx={{ maxWidth: `70ch`, my: 4 }}>{children}</div>
-    </div>
-    <div sx={{ backgroundColor: transparentize(0.9, project.color) }}>
-      <div sx={{ variant: `content.imageList` }}>
-        {images.nodes.map((image) => (
-          <GatsbyImage key={image.name} alt={image.name} image={image.childImageSharp.gatsbyImageData} />
-        ))}
+const Project: React.FC<
+  React.PropsWithChildren<PageProps<JodieProjectProps>>
+> = ({ data: { project, images }, children }) => (
+  <>
+    <Layout >
+      <div sx={{ variant: `content.project` }}>
+        <div
+          sx={{
+            fontSize: 2,
+            textTransform: `uppercase`,
+            letterSpacing: `wider`,
+            mb: 2,
+          }}
+        >
+        </div>
+        <Heading as="h1" variant="styles.h1" sx={{ mt: 0 }}>
+          {project.title}
+        </Heading>
+        <div sx={{ maxWidth: `70ch`, my: 4 }}>{children}</div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  </>
+);
 
 export default Project
 

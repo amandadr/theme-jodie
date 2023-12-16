@@ -22,8 +22,11 @@ export type JodiePageProps = {
   }
 }
 
-const Page: React.FC<React.PropsWithChildren<PageProps<JodiePageProps>>> = ({ data: { page }, children }) => (
-  <Layout color={page.color || undefined}>
+const Page: React.FC<React.PropsWithChildren<PageProps<JodiePageProps>>> = ({
+  data: { page },
+  children,
+}) => (
+  <Layout color={page.color || `#f8f7f2`}>
     <div
       sx={{
         variant: page.custom ? `content.custom` : `content.page`,
@@ -33,7 +36,7 @@ const Page: React.FC<React.PropsWithChildren<PageProps<JodiePageProps>>> = ({ da
       {children}
     </div>
   </Layout>
-)
+);
 
 export default Page
 

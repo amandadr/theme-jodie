@@ -1,7 +1,6 @@
 const locales = {
   home: `Home`,
-  projects: `Projects`,
-  instagram: `Instagram`,
+  projects: `Projects`
 }
 
 export default locales

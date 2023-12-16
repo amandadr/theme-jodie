@@ -24,7 +24,7 @@ const theme = merge(tailwind, {
     primaryLight: `#f18a27`,
     secondary: tailwind.colors.indigo[6],
     heading: tailwind.colors.black,
-    background: tailwind.colors.white,
+    background: `#fafbfb`,
     text: tailwind.colors.gray[9],
     textMuted: `#46505f`,
     textMutedLight: `#a0aab8`,
@@ -32,6 +32,7 @@ const theme = merge(tailwind, {
   sidebar: {
     normal: `320px`,
     wide: `375px`,
+    // background: `#f8f7f2`,
   },
   fonts: {
     body: `-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
@@ -142,6 +143,6 @@ const theme = merge(tailwind, {
       wordBreak: `keep-all`,
     },
   },
-})
+});
 
 export default theme

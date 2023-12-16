@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/** @jsxFrag */
 import { jsx, get } from "theme-ui"
 import * as React from "react"
 import { Global } from "@emotion/react"
@@ -9,8 +10,8 @@ import { SkipNavTarget, SkipNavTrigger } from "./skip-nav"
 
 type LayoutProps = { children: React.ReactNode; color?: string }
 
-const Layout = ({ children, color = `#f8f7f2` }: LayoutProps) => (
-  <React.Fragment>
+const Layout = ({ children, color = "#f8f7f2" }: LayoutProps) => (
+  <>
     <Global
       styles={(t) => ({
         "*,*:after,*:before": {
@@ -27,14 +28,14 @@ const Layout = ({ children, color = `#f8f7f2` }: LayoutProps) => (
     />
     <SkipNavTrigger />
     <Wrapper>
-      <Sidebar bg={color} />
+      <Sidebar bg={"#f8f7f2"} />
       <main sx={{ gridColumnStart: [1, 1, 1, 2] }}>
         <SkipNavTarget />
         {children}
       </main>
-      <Footer bg={color} />
+      <Footer bg={"#f8f7f2"} />
     </Wrapper>
-  </React.Fragment>
+  </>
 );
 
 export default Layout
