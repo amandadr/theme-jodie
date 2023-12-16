@@ -7,7 +7,6 @@ import { Link } from "gatsby";
 const GridItem: React.FC<
   React.PropsWithChildren<{ to: string; className?: string }>
 > = ({ children, to, ...props }) => (
-  <>
     <Link
       to={to}
       sx={{
@@ -84,7 +83,6 @@ const GridItem: React.FC<
     >
       {children}
     </Link>
-  </>
 );
 
 export default GridItem;

@@ -30,7 +30,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
     image: `${siteUrl}${image || defaultImage}`,
   }
   return (
-    <>
+    <React.Fragment>
       <html lang={siteLanguage} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
@@ -53,7 +53,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/favicon-16x16.png`)} />
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
       {children}
-    </>
+    </React.Fragment>
   )
 }
 
