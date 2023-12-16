@@ -9,7 +9,7 @@ import { SkipNavTarget, SkipNavTrigger } from "./skip-nav"
 
 type LayoutProps = { children: React.ReactNode; color?: string }
 
-const Layout = ({ children, color = `white` }: LayoutProps) => (
+const Layout = ({ children, color = `#f8f7f2` }: LayoutProps) => (
   <React.Fragment>
     <Global
       styles={(t) => ({
@@ -35,6 +35,6 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
       <Footer bg={color} />
     </Wrapper>
   </React.Fragment>
-)
+);
 
 export default Layout
